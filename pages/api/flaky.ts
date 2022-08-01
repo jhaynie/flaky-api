@@ -28,6 +28,10 @@ export default function handler(
       return;
     }
     case 2: {
+      res.status(504).end(); // gateway timeout
+      return;
+    }
+    case 3: {
       res.status(408).end(); // time out
       return;
     }
