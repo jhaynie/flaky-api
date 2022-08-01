@@ -27,6 +27,10 @@ export default function handler(
       res.status(503).end(); // service unavailable
       return;
     }
+    case 2: {
+      res.status(408).end(); // time out
+      return;
+    }
   }
   res.status(200).json({ name: "John Doe" });
 }
